@@ -1,0 +1,29 @@
+## The server configuration
+server:
+  port: 9999
+  servlet:
+    context-path: /camel
+  ssl:
+    enabled: false
+
+## database configuration
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:jack;MODE=Oracle;INIT=SET SCHEMA jack\;
+    username: jack
+    password: 1
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 20
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    table: MG_SCHEMA_HISTORY
+    user: jack
+    password: 1
+    url: jdbc:h2:mem:jack;MODE=Oracle;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS jack\; CREATE USER IF NOT EXISTS jack PASSWORD '1'\;SET SCHEMA jack\;
+  h2:
+    console:
+      ## the console should be http://hostname:port/contextPath/h2-console/
+      enabled: true
