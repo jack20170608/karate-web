@@ -1,0 +1,4 @@
+## Karate web
+karate-web:
+  report:
+    home: E:\karate-web\report\

@@ -30,10 +30,13 @@ public class KarateReportResourcesConfig implements WebMvcConfigurer {
         }
         this.reportFileHome = reportFileHome;
         this.reportContextPath = reportContextPath;
+        logger.info("Karate web karate-web.report.home=[{}], karate-web.report.context-path:report=[{}]."
+                , reportFileHome, reportContextPath);
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
+        logger.info("add resource mapping......... ");
         registry.addResourceHandler(reportContextPath + "/**")
                 .addResourceLocations("file:" + reportFileHome);
     }

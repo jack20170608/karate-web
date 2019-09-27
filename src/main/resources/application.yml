@@ -10,7 +10,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:jack;MODE=Oracle;INIT=SET SCHEMA karate\;
+    url: jdbc:h2:mem:karate;MODE=Oracle;INIT=SET SCHEMA karate\;
     username: karate
     password: 1
     hikari:
@@ -27,3 +27,15 @@ spring:
     console:
       ## the console should be http://hostname:port/contextPath/h2-console/
       enabled: true
+  profiles:
+    active: local
+
+
+## Karate web
+karate-web:
+  engine:
+    thread-count: 1
+  report:
+    home: ${REPORT_HOME}
+    context-path: report
+
