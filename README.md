@@ -1,3 +1,4 @@
-# camel-explorer
+# Karate web 
 
-This is just a explore project for camel.
+This is just a web wrapper for the karate engine.
+

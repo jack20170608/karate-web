@@ -9,11 +9,6 @@ import java.util.List;
 @RestController
 public class HiController {
 
-//    @GetMapping("/{id}")
-//    public String sayHi(@PathVariable String name){
-//        return "hi, " + name;
-//    }
-
     @GetMapping("/list")
     public List<String> getAllNames(){
         return Lists.newArrayList("1","2","3");
