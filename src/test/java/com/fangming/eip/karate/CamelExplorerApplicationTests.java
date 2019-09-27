@@ -1,4 +1,4 @@
-package com.fangming.eip.camelexplorer;
+package com.fangming.eip.karate;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

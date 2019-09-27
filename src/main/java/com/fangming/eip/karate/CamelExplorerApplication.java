@@ -1,4 +1,4 @@
-package com.fangming.eip.camelexplorer;
+package com.fangming.eip.karate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
